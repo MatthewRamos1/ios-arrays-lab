@@ -10,12 +10,28 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
+```swift
+
+var colors =  ["orange", "red", "yellow", "turquoise", "lavender"]
+print("\(colors[0]), \(colors[2]), and \(colors[4]) are some of my favorite colors")
+
+```
+
 
 ## Question 2
 
 Remove "Illinois" and "Kansas" from the array below.
 
-`var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
+```swift
+
+var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
+
+westernStates.remove(at: westernStates.count - 1)
+westernStates.remove(at: westernStates.count - 1)
+ print(westernStates)
+ 
+
+```
 
 
 ## Question 3
@@ -24,16 +40,40 @@ Iterate through the array below. For each state, print out the name of the state
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
 
+```swift
 
+let continentalStates = ["Hawaii, New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+for  index in 0 ..< continentalStates.count {
+    if continentalStates[index] == continentalStates[0] {
+        print("\(continentalStates[index]) is not in continental US")
+    } else {
+        print("\(continentalStates[index]) is in the continental US")
+}
+}
+
+```
 ## Question 4
 
 Print out how many non-whitespace characters are in `myString`:
 
-`let myString = "This is good practice with Strings!"`
+```swift
+
+let myString = "This is good practice with Strings!"
+var noSpaceString = ""
+for char in myString {
+    if char != " " {
+        noSpaceString += String(char)
+    }
+}
+print ("There are \(noSpaceString.count) non-whitespace characrers.")
+
+```
 
 Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
 
 `let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]`
+
 
 
 ## Question 5
